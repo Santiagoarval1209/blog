@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+<main>
+    <h2>Últimas entradas del blog</h2>
+    <div class="posts-container">
+        <% posts.forEach(post => { %>
+            <div class="post-card">
+                <img src="<%= post.thumbnail %>" alt="<%= post.title %>">
+                <h3><a href="/post/<%= post.id %>"><%= post.title %></a></h3>
+                <p><%= post.intro %></p>
+            </div>
+        <% }); %>
+    </div>
+</main>
+<%- include('partials/footer') %>
